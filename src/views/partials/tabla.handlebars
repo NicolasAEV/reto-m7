@@ -1,0 +1,46 @@
+<div class="row">
+    <div class="col-2">
+
+        <div>
+            <hr>
+            <p>eliminar pais por nombre</p>
+            <form id="eliminarPais">
+                <div class="mb-3">
+                    <label class="form-label">Nombre pais</label>
+                    <input type="text" name="nombrePaisEliminar" id="nombrePaisEliminar" class="form-control" required>
+                </div>
+                <button type="submit" class="btn btn-danger">Eliminar</button>
+            </form>
+        </div>
+
+    </div>
+    <div class="col-10">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Nombre pais</th>
+                    <th scope="col">Pib 2019</th>
+                    <th scope="col">Pib 2020</th>
+                    <th scope="col">Diferencia</th>
+
+
+                </tr>
+            </thead>
+            <tbody>
+                {{#if paises}}
+                {{#each paises}}
+                <tr>
+                    <td>{{this.nombre}}</td>
+                    <td>{{this.pib_2019}}</td>
+                    <td>{{this.pib_2020}}</td>
+                    <td>{{this.diferencia}}</td>
+                </tr>
+                {{/each}}
+                {{else}}
+                <td>no existen paises</td>
+                {{/if}}
+
+            </tbody>
+        </table>
+    </div>
+</div>

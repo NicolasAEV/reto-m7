@@ -1,0 +1,24 @@
+<h1>PIB</h1>
+<section class="mb-3">
+    <form id="formulario">
+        <div>
+            <label class="form-label">Nombre Pais</label>
+            <input type="text" id="nombre" name="nombre" class="form-control" required>
+
+        </div class="mb-3">
+        <div>
+            <label class="form-label">Pib 2019</label>
+            <input type="number" id="pib_2019" name="pib_2019" class="form-control" required>
+
+        </div class="mb-3">
+        <div class="mb-3">
+            <label class="form-label">Pib 2020</label>
+            <input type="number" id="pib_2020" name="pib_2020" class="form-control" required>
+
+        </div>
+        <button type="submit" class="btn btn-success">Agregar pais</button>
+    </form>
+</section>
+{{>tabla}}
+
+<script src="/js/peticiones.js"></script>
